@@ -1,0 +1,689 @@
+<html>
+    <head>
+        <title>teacher</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    li
+    {
+        list-style: none;
+    }
+    #nav
+    {
+        display: flex;
+        width: 100%;
+        top: 0;
+        position: sticky;
+        background-color: white;
+        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.308);
+    }
+    nav div{
+        /* border: 1px solid black; */
+        margin: auto;
+    }
+    #navdiv1
+    {
+        width: 20%;
+    }
+    #navdiv2
+    {
+        width: 50%;
+    }
+    #navdiv2 button
+    {
+        width: 6%;
+        margin: 0;
+        border-left: 1px solid rgba(0, 0, 0, 0.155);
+        border-top: none ;
+        border-right: none ;
+        border-bottom: none ;
+        color: #0080ff;
+        background-color: #0080ff56;
+    }
+    #navdiv2 button:hover{
+        color: white;
+        background-color: #0080ffd0;
+        cursor: pointer;
+    }
+    #navdiv2 div{
+        border: 1px solid rgba(0, 0, 0, 0.155);
+        border-radius: 3px;
+        width: 75%;
+        display: flex;
+    }
+    #navdiv3
+    {
+        font-size: 14px;
+        display: flex;
+        width: 25%;
+    }
+    #navdiv3 div 
+    {
+        display:flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+    }
+    .fa-angle-down
+    {
+        font-size: 20px;
+    }
+    .fa-bell{
+        font-size: 25px;
+        margin: auto;
+        padding: 0px 30px;
+    }
+    #navdiv3 div p{
+        margin: auto 10px;
+    }
+    #text
+    {
+        width: 94%;
+        border: none;
+        border-radius: 3px;
+        padding: 8px 10px;
+    }
+    #text:focus
+    {
+        outline:none;
+    }
+    #search
+    {
+        font-size: 20px;
+    }
+    
+    #list
+    {
+        position: relative;
+    }
+    .dropdown
+    {
+        border: 1px solid rgba(55, 55, 55, 0.107);
+        border-radius: 2px;
+        text-align: center;
+        background: #ffffff;
+        width: 150px;
+        position: absolute;
+        display: none;
+        box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.096);
+    }
+    li a:hover{
+        background: #ffffff;
+    }
+    li:hover .dropdown
+    {
+        display:block;
+    } 
+    ul li{
+        padding: 10px 10px;
+    }
+    ul li a{
+        text-decoration: none;
+        color: black;
+    }
+
+
+</style>
+
+    </head>
+    <body>
+        <nav id="nav">
+            <div id="navdiv1">
+                <img src="picture/logo1.png" alt="" width="250px">
+            </div>
+            <div id="navdiv2">
+                <div>
+                    <input type="text" name="" id="text" placeholder="Search Courses, Items, Exams........">
+                    <button><i id="search" class="fa-sharp fa-solid fa-magnifying-glass" ></i></button>
+                </div>
+            </div>
+            <div id="navdiv3">
+                <i class="fa-regular fa-bell" style="color: #0080ff;"></i>
+                <div><img src="picture/user.png" alt="" width="35px" height="35px"><p>profile Name</p>
+                    <li id="list">
+                        <a href="#"><i id="arrow" class="fa-solid fa-angle-down" style="color: #00000099;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="regteach.html">Login</a></li>
+                            <li><a href="#">option2</a></li>
+                            <li><a href="#">option3</a></li>
+                            <li><a href="#">option4</a></li>
+                            <li><a href="#">option5</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </nav>
+        <style>
+            #sidenav
+            {
+                box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.34);
+                width:75px;
+                height: 91vh;
+                left: 0;
+                top: 69;
+                position: fixed;
+                overflow: hidden;
+                background-color: white;
+                transition: 0.6s ease;
+            }
+            #sidenav:hover
+            {
+                width: 300px;
+                transition: 0.6s ease;
+            }
+            hr
+            {
+                width: 90%;
+                margin: auto;
+                border:1px solid #00000041;
+            }
+            #sidenav>ul
+            {
+                position: sticky;
+                top: 0;
+            }
+            #sidenav>ul>li>a
+            {
+                display: flex;
+                margin: 0;
+                /* border: 1px solid black; */
+                width: 280px;
+                padding: 5px 0px ;
+            }
+            #sidenav>ul>li>a>div{
+                display: flex;
+                text-decoration: none;
+                /* border: 1px solid black; */
+                justify-content: space-between;
+                width: 100%;
+                font-size: 14px;
+                margin: 0px 10px;
+                /* display: none; */
+            }
+            #sidenav>ul>li>a:hover{
+                background-color: #0080ff63;
+                border-radius: 50px 0px 0px 50px;
+            } 
+            #sidenav>ul>li>a>i{
+                font-size: 18px;
+                /* border: 1px solid black; */
+                margin: auto;
+                text-align: center;
+                align-items: center;
+                padding: 0px 20px;
+            }
+            /* h5{
+                font-size: 12px;
+                background-color: #0058b0;
+                color: white;
+                border-radius: 50px;
+                padding: 2px 10px;
+                margin: 0px 0px 0px auto;;
+            } */
+            h4{
+                padding: 5px 0px;
+                text-align: start;
+                font-weight: 100;
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.594);
+
+            }
+            #body-div
+            {
+                display: flex;
+                position: static;
+
+            }
+            #result-div
+            {
+                margin-left: 75px;
+                transition: 0.6s ease;
+                /* background-color: blue; */
+            }
+            
+        </style>
+        <div id="body-div">
+            <nav id="sidenav">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-table-columns" style="color: #656565;"></i><div>Dashboard</div></a></li>
+                    <hr>
+                    <li>
+                        <h4>Text</h4>
+                        <li><a href="#"><i class="fa-solid fa-lines-leaning" style="color: #656565;"></i><div><p>Items</p></div></a></li>
+                        <li><a href="#"><i class="fa-solid fa-file-lines" style="color: #656565;"></i><div><p>Exams</p></div></a></li>
+                    </li>
+                    <!-- <br> -->
+
+                    <hr>
+                    
+                    <li>
+                        <h4>organize</h4>
+                        <li><a href="#"><i class="fa-solid fa-sailboat" style="color: #656565;"></i><div><p>Courses</p></div></a></li>
+                        <li><a href="#"><i class="fa-solid fa-diagram-next" style="color: #656565;"></i><div><p>Courses Subscription &nbsp;</p></div></a></li>
+                        <li><a href="#"><i class="fa-solid fa-graduation-cap" style="color: #656565;"></i><div><p>Students</p></div></a></li>
+                        <li><a href="#"><i class="fa-solid fa-users" style="color: #656565;"></i><div><p>Private Groups</p></div></a></li>
+                    </li>
+                    <!-- <br> -->
+
+                    <hr>
+
+                    <li>
+                        <h4>Manage</h4>
+                        <li><a href="#"><i class="fa-solid fa-user" style="color: #656565;"></i><div><p>Users</p></div></a></li>
+                        <li><a href="#"><i class="fa-solid fa-gear" style="color: #656565;"></i><div><p>Configuration</p></div></a></li>
+                    </li>
+                </ul>
+            </nav>
+            <style>
+            #sidenav:hover ~ #result-div
+            {
+                margin-left: 300px ;
+                transition: 0.6s ease;
+            }
+            #result-div
+            {
+                /* border: 1px solid black; */
+                width: 200vh;
+            }
+            #result-div>div{
+                border: 1px solid rgba(0, 0, 0, 0);
+                background-color: rgba(93, 141, 255, 0.103);
+                height: 100%;
+            }
+            #result-div h1
+            {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.103); ;
+                padding: 15px;
+                box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.107);
+                font-size: 25px;
+            }
+            #div-box-1
+            {
+                border: 1px solid rgba(0, 0, 0, 0.226);
+                margin: 15px 35px;
+                border-radius: 3px;
+                background-color: white;
+                box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.208);
+            }
+            #divbox-1-1
+            {
+                display: flex;
+                justify-content: space-between;
+            }
+            #divbox-1-1>div
+            {
+                padding: 15px 15px;
+            }
+            #divbox-1-1>div>h3
+            {
+                /* border: 1px solid black; */
+                font-size: 20px;
+                font-weight: 500;
+                padding: 10px 0px;
+            }
+            #divbox-1-1>div>h4
+            {
+                font-size: 13px;
+                font-weight: 500;
+                color: #434343;
+            }
+            #exam-time>div
+            {
+                display: flex;
+                /* border: 1px solid black; */
+            }
+            #exam-time>div>p{
+                border: 1px solid rgba(0, 0, 0, 0.201);
+                margin: 0px 5px;
+                padding: 5px 10px ;
+                border-radius: 3px;
+            }
+            #date{
+                font-size: 15px;
+                color: rgba(0, 0, 0, 0.614);
+                margin:10px 5px ;
+                font-weight: 100;
+            }
+            #grid
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+            #grid>div{
+                border: 1px solid rgba(0, 0, 0, 0.199);
+                border-radius: 4px;
+                margin: 10px 15px;
+                display: flex;
+                padding: 15px 0px;
+            }
+            #grid>div>i{
+                padding: 15px 17px;
+                border-radius: 60px;
+                font-size: 25px;
+                margin: auto 20px;
+            }
+            #grid>div>div>h2{
+                /* border: 1px solid black; */
+                font-size: 30px;
+                font-weight: normal ;
+            }
+            #search_
+            {
+                border: 1px solid rgba(0, 0, 0, 0.315);
+                width: 25%;
+                margin: 10px 5px 5px 5px;
+                display: flex;
+                border-radius: 3px;
+            }
+            #search_>input
+            {
+                padding: 8px;
+                width: 90%;
+                border: none;
+                border-radius: 3px;
+            }
+            #search_>input:focus
+            {
+                outline: 0px;
+            }
+            #search_>button{
+                width: 10%;
+                border: none;
+                border-left: 1px solid rgba(0, 0, 0, 0.046);
+                border-radius: 0px 3px 3px 0px;
+                color: #0051ff;
+                background-color: #0080ff26;
+            }
+            #underline{
+                margin:5px 0px 0px 0px;
+                background-color: #0080ff;
+                width: 15%;
+                
+            }
+            #navigator
+            {
+                display: flex;
+                /* border: 1px solid black; */
+            }
+            #navigator>select,#date-time{
+                margin: 10px 5px 5px 5px;
+                padding: 5px;
+                width: 15%;
+                border-radius: 4px;
+                border: 1px solid rgba(0, 0, 0, 0.279);
+            }
+            #clear
+            {
+                margin: 10px 5px 5px 5px;
+                font-size: 15px;
+                padding: 5px;
+            }
+            #clear>a{
+                text-decoration: none;
+                padding: 0px 3px;
+                color: #08123950;
+            }
+            #clear>i
+            {
+                color: #08123950;
+            }
+            #table
+            {
+                margin: 5px;
+            }
+            
+            </style>
+            <div id="result-div">
+                <h1>Exam Results</h1>
+                <div> 
+                    <div id="div-box-1">
+                        <div id="divbox-1-1">
+                            <div id="exam-detail">
+                                <h3>Exam: unit 6 final exam</h3>
+                                <h4>Course: English lv 6</h4>
+                                <h4>20 Questions: All in one exam</h4>
+                            </div>
+                            <div id="exam-time">
+                                <h5 id="date">21 Oct 2020 9:00AM -> 12:00AM</h5>
+                                <div>
+                                    <p><i class="fa-sharp fa-regular fa-clock" style="color: #000000; "></i>30 Min</p>
+                                    <p><i class="fa-sharp fa-regular fa-file-lines" style="color: #000000;"></i>50 Marks (Pass marks:40)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="grid">
+                            <div>
+                                <i class="fa-regular fa-user" style="color: #0066ff; background-color:#0066ff38"></i><div><p>Total Students</p><h2>400</h2></div>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-star" style="color: #525252; background-color:#5252522c"></i><div><p>Avarage Score</p><h2>100</h2></div>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-bug" style="color: #ff7801; background-color:#ff78012f"></i><div><p>Total Absent Student</p><h2>12</h2></div>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-check" style="color: #00fbff; background-color:#00c4c72f"></i><div><p>Total Finished Students</p><h2>365</h2></div>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-flag" style="color: #00ff62; background-color:#00ff6231"></i><div><p>Total Passed Students</p><h2>365</h2></div>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-xmark" style="color: #ff0000; background-color:rgba(255, 0, 43, 0.258)"></i><div><p>Total Failed Students</p><h2>35</h2></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="div-box-2">
+                        <div>
+                            <h3>Attendence</h3>
+                            <hr id="underline">
+                        </div>
+                        <div id="navigator">
+                            <div id="search_">
+                                <input type="text" name=""placeholder="Search name or e-mail......">
+                                <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                            <select name="" id="status"><option value="">Status: all</option><option value="Status 1">Status 1</option><option value="Status 2">Status 2</option><option value="Status 3">Status 3</option></select>
+                            <select name="" id="grade"><option value="">Grade: all</option><option value="Grade 1">Grade 1</option><option value="Grade 2">Grade 2</option><option value="Grade 3">Grade 3</option></select>
+                            <input type="datetime-local" name="" id="date-time">
+                            <div id="clear"><i class="fa-sharp fa-regular fa-circle-xmark"></i><a href="#">Clear</a></div>
+                        </div>
+                        <div id="table">
+                        <table>
+                            <thead>
+                                <tr id="thead-row">
+                                    <th>Student Name</th>
+                                    <th>Passed / failed</th>
+                                    <th>Score</th>
+                                    <th>Grade</th>
+                                    <th>Time spent</th>
+                                    <th>submitted/timeout</th>
+                                    <th>details</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                                <tr id="table-row">
+                                    <td id="flex-td"><input type="image" src="picture/user.png" width="40px" height="40px"><p>Anaru Hakupa</p></td>
+                                    <td><span>passed</span></td>
+                                    <td id="score">40/50(85%)</td>
+                                    <td id="grade_">Excellent</td>
+                                    <td>22MIN</td>
+                                    <td>09 nov 2023 9.00 AM</td>
+                                    <td><a id="see-detail" href="#">see detail</a></td>
+                                </tr>
+                            <tbody>
+                        </table>
+                        <style>
+                            #div-box-2
+                            {
+                                margin: 15px 35px;
+                                top: 85;
+                                position: sticky;
+                                
+                            }
+                            table
+                            {
+                                top: 0;
+                                /* border: 1px solid black; */
+                                width: 100%;
+                                border-spacing: 0 10px;
+                                
+                            }
+                            #table
+                            {
+                                /* border: 1px solid black; */
+                                overflow-y: scroll;
+                                top: 0;
+                                height: 550px;
+                                position: relative;
+                            }
+                            ::-webkit-scrollbar
+                            {
+                                display: none;
+                            }
+                            thead th{
+                                text-align: start;
+                                font-weight: normal;
+                                padding: 10px 10px;
+                                align-items: center;
+                                position: sticky;
+                                top: 0;
+                                /* border: 1px solid black; */
+                                background-color: #EEF3FF;
+                                color: rgba(0, 0, 0, 0.564);
+                            }
+                            span
+                            {
+                                padding:5px 20px;
+                                border-radius: 50px;
+                                background-color: rgba(172, 255, 47, 0.199);
+                                color:#38c600;
+                            }
+                            #flex-td
+                            {
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                            }
+                            td{
+                                padding: 10px;
+                            }
+
+                            #table-row
+                            {
+                                background-color: rgb(255, 255, 255);
+                                box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.08);
+                            }
+                            #score,#grade_
+                            {
+                                color: #6ac600;
+                            }
+                            #see-detail
+                            {
+                                text-decoration: none;
+                                color: blue;
+                            }
+                            
+                            
+                        </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

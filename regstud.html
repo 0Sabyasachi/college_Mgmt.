@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>stud reg</title>
+
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body
+            {
+                background-color: #0080ff;
+            }
+            .con
+            {
+                background-color: white;
+                margin:3% auto;
+                width: 70%;
+                padding: 20px 0px 0px 0px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 30px 1px rgba(79, 79, 79, 0.444);
+            }
+            #personal,#identity
+            {
+                
+                display: grid;
+                grid-template-columns: auto auto auto;
+                margin: auto 20px;
+                /* border: 1px solid black; */
+            }
+            #personal>div,#identity>div
+            {
+                /* border: 1px solid black; */
+                width: 90%;
+                /* margin: auto 20px; */
+                /* text-align: center; */
+            }
+            #personal>div>p,#identity>div>p
+            {
+                /* text-align: left; */
+                margin: 5px 0;
+                padding: 5px;
+            }
+            #details{
+                border: 1px solid rgba(0, 0, 0, 0.416);
+                border-radius : 5px;
+                margin: 0;
+                padding: 0;
+                width:100%;
+                padding: 12px 10px;
+            }
+            #details:focus
+            {
+                outline : 1px solid #0066ff;
+                border-color: #0066ff;
+            }
+            option
+            {
+                background-color: #0080ffb1;
+                color: rgb(255, 255, 255);
+            }
+            #submit
+            {
+                background-color: #0080ff;
+                margin: 30px 20px;
+                padding: 15px 70px;
+                border: none;
+                border-radius: 5px;
+                color: white;
+            }
+            #submit:hover{
+                box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.532);
+                cursor: pointer;
+            }
+            #heading
+            {
+                font-size: 20px;
+                font-weight: 500;
+                margin: 20px;
+                text-transform: capitalize;
+            }
+            h1
+            {
+                margin: 0px 20px 0px 20px;
+                text-transform: capitalize;
+            }
+            hr
+            {
+                width:5%;
+                margin: 4px 20px;
+                border: 2px solid #0080ff;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="con" action="phpFiles/regstud.php" method="post">
+            <h1>registration</h1>
+            <hr>
+            <div>
+                <p id="heading">personal details</p>
+                <div id="personal">
+                    <div>
+                        <p>Name</p>
+                        
+                        <input type="text" name="stu_name" id="details" placeholder="Enter your Name">
+                    </div>
+                    <div>
+                        <p>Email Id</p>
+                        
+                        <input type="email" name="stu_email" id="details" placeholder="Enter your Email Id">
+                    </div>
+                    <div>
+                        <p>Contact Number</p>
+                        
+                        <input type="number" name="stu_contact" id="details" placeholder="Enter your Contact Number">
+                    </div>
+                    <div>
+                        <p>Gender</p>
+                        
+                        <select id="details" name="stu_gender">
+                            <option value="">Select gender</option>
+                            <option value="male" >Male</option>
+                            <option value="female" >Female</option>
+                            <option value="others" >Others</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Date of Birth</p>
+                        
+                        <input type="date" name="stu_birthdate" id="details" placeholder="Enter your Date of Birth">
+                    </div>
+                    <div>
+                        <p>stream</p>
+                        
+                        <select id="details" name="stu_stream">
+                            <option value="">select stream</option>
+                            <option value="cse">CSE</option>
+                            <option value="mech">MECH</option>
+                            <option value="ence">ENCE</option>
+                            <option value="civil">CIVIL</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p id="heading">Identity details</p>
+                <div id="identity">
+                    <div>
+                        <p>User Name</p>
+                        
+                        <input type="text" id="details" name="stu_username" placeholder="Enter a User Name">
+                    </div>
+                    <div>
+                        <p>Registration Number</p>
+                        
+                        <input type="number" id="details" name="reg_no" placeholder="Enter your Registration Number">
+                    </div>
+                    <div>
+                        <p>Issued Date</p>
+                        
+                        <input type="date" id="details" name="stu_issueddate" placeholder="Enter the Issue Date">
+                    </div>
+                    <div>
+                        <p>Expiry Date</p>
+                        
+                        <input type="date" id="details" name="stu_expirydate" placeholder="Enter the Expiry Date">
+                    </div>
+                    <div>
+                        <p>New Password</p>
+                        
+                        <input type="password" id="details" name="stu_newpass" placeholder="Enter a new Password">
+                    </div>
+                    <div>
+                        <p>Confirm Password</p>
+                        
+                        <input type="password" id="details" name="stu_confirmpass" placeholder="Re-enter the Password">
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Submit" id="submit" placeholder="Enter your Name">
+        </form>
+    </body>
+</html>

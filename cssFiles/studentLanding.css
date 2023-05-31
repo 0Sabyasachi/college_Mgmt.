@@ -1,0 +1,150 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body
+{
+    background-image: url("../picture/back.jpg");
+    background-size: 100%;
+}
+nav{
+    display: flex;
+    /* border: 1px solid rgba(255, 255, 255, 0.144); */
+}
+#navDiv1
+{
+    width: 25%;
+}
+#navDiv2
+{
+    width: 25%;
+    margin: auto;
+}
+#navDiv3
+{
+    width: 50%;
+}
+#navDiv2>div
+{
+    color: white;
+    /* border: 1px solid white; */
+    width: 55%;
+    display: flex;
+    border-radius: 50px;
+    background-color: #faebd723;
+}
+#navDiv2>div>i{
+    margin: auto;
+    padding: 12px 15px;
+}
+#search-bar
+{
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    color: antiquewhite;
+}
+#search-bar::placeholder
+{
+    color: rgba(250, 235, 215, 0.495);
+}
+#search-bar:focus
+{
+    outline: none;
+}
+#navDiv3
+{
+    display: flex;
+    justify-content: end;
+    margin: auto;
+    /* border: 1px solid white; */
+}
+#profile-btn
+{
+    background-color: #faebd723;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+#profile-btn:hover{
+    background-color: #faebd751;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+#profile-btn>p
+{
+    margin: auto;
+    margin-left: 10px;
+    color: #faebd7b2;
+}
+#profileicon
+{
+    margin: 5px auto;
+}
+#navDiv3>a{
+    margin: auto 30px;
+    text-decoration: none;
+    color: #faebd7b2;
+    font-size: 17px;
+}
+#navDiv3>a:hover{
+    color: #ff0e70;
+    text-shadow: 3px 3px 10px #ff2e81;
+}
+#bodypart
+{
+    /* border: 1px solid rgb(255, 255, 255); */
+    margin: 40px 70px;
+    background-color: #faebd723;
+    border-radius: 20px;
+    padding: 50px;
+}
+#bodypart>div{
+    /* border: 1px solid white; */
+    background-image: url("/campus_bridge/picture/AI2.png");
+    border-radius: 25px;
+    padding: 50px;
+    height: 65%;
+    
+}
+body>div{
+    background-color: #d7e3fa17;
+    height: 100%;
+}
+#bodypart>div>p{
+    font-size: 24px;
+    padding: 20px 0px 15px 20px;
+}
+#bodypart>div>h1
+{
+    font-size: 80px;
+    display: inline-block;
+    padding: 20px 0px 20px 20px;
+}
+em{
+    font-style: normal;
+    color: #e30079;
+}
+#BrowseBtn
+{
+    border: none;
+    background-color: #f70084;
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin: 20px 0px 20px 20px;
+    font-size: 15px;
+}
+#bodypart>div>h1>div{
+    color: rgba(223, 223, 223, 0.812);
+}
+
+
